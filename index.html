@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>음성 에이전트 등록 및 테스트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>음성 에이전트 등록</h1>
+    <form id="register-form">
+        <label for="agent-name">에이전트 이름:</label>
+        <input type="text" id="agent-name" required>
+        <label for="agent-description">에이전트 설명:</label>
+        <textarea id="agent-description" required></textarea>
+        <label for="agent-sample">음성 샘플 파일:</label>
+        <input type="file" id="agent-sample" accept="audio/*" required>
+        <button type="submit">등록</button>
+    </form>
+    <h1>음성 에이전트 테스트</h1>
+    <form id="test-form">
+        <label for="agent-id">에이전트 ID:</label>
+        <input type="text" id="agent-id" required>
+        <label for="test-text">테스트할 텍스트:</label>
+        <textarea id="test-text" required></textarea>
+        <button type="submit">테스트</button>
+    </form>
+    <audio id="audio-player" controls></audio>
+    <script src="script.js"></script>
+</body>
+</html>
